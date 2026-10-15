@@ -42,14 +42,16 @@ Everything Antigravity bundles 300+ modular engineering skills under `skills/` a
 
 When solving complex, multi-stage problems, delegate focused tasks to specialized subagents:
 
-| Role | Subagent Persona | Recommended Model | Best For |
-| :--- | :--- | :--- | :--- |
-| **System Architect** | `agents/code-architect.md` | `pro` | High-level system design, schema modeling, ADR documentation |
-| **Planner** | `agents/planner.md` | `pro` | Deconstructing large tasks into atomic, dependency-ordered milestones |
-| **TDD Guide** | `agents/tdd-guide.md` | `inherit` | Writing test harnesses, edge case tests, test suites |
-| **Code Reviewer** | `agents/code-reviewer.md` | `pro` | Post-implementation review for regressions, code smells, readability |
-| **Security Auditor** | `agents/security-auditor.md` | `pro` | Reviewing auth, injections, sanitization, and dependency vulnerabilities |
-| **Build Resolver** | `agents/build-error-resolver.md` | `flash` | Rapidly diagnosing build, compile, and syntax errors |
+| Role | Subagent Persona | Antigravity Model Flag | Target Engine Tier | Best For |
+| :--- | :--- | :--- | :--- | :--- |
+| **System Architect** | `agents/code-architect.md` | `pro` | **Gemini 4 Argon** (Ultra) | High-level system design, schema modeling, ADR documentation |
+| **Planner** | `agents/planner.md` | `pro` | **Gemini 4 Argon** (Ultra) | Deconstructing large tasks into atomic, dependency-ordered milestones |
+| **TDD Guide** | `agents/tdd-guide.md` | `inherit` / `flash` | **Gemini 3.8 Flash** | Writing test harnesses, edge case tests, test suites |
+| **Code Reviewer** | `agents/code-reviewer.md` | `pro` | **Gemini 4 Argon** (Ultra) | Post-implementation review for regressions, code smells, readability |
+| **Security Auditor** | `agents/security-auditor.md` | `pro` | **Gemini 4 Argon** (Ultra) | Reviewing auth, injections, sanitization, and dependency vulnerabilities |
+| **Build Resolver** | `agents/build-error-resolver.md` | `flash` | **Gemini 3.8 Flash** | Rapidly diagnosing build, compile, and syntax errors |
+
+> *Note: In Antigravity subagent configurations, `pro` delegates to the top reasoning model (Gemini 4 Argon for Ultra subscribers), while `flash` delegates to Gemini 3.8 Flash.*
 
 ---
 

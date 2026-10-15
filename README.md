@@ -124,14 +124,21 @@ description: Query profiling, index strategy, connection pool sizing, and query 
 ```
 Antigravity indexes the skill description and only loads the full step-by-step workflow when you specifically request database work.
 
-### 2. Multi-Agent Delegation
-Antigravity can invoke specialized subagents defined in `agents/`:
+### 2. Multi-Agent Delegation & Model Tiers
+Antigravity invokes specialized subagents defined in `agents/` using optimized model tiers:
+
+* ⚡ **Gemini 3.8 Flash (`flash` / `inherit`)**:
+  * Ultra-fast, highly responsive pair programming.
+  * Ideal for rapid coding, build error resolution (`build-error-resolver`), test execution, and code exploration.
+* 🧠 **Gemini 4 Argon (`pro` - Ultra Tier)**:
+  * Super-reasoning tier for complex, multi-step problem solving.
+  * Ideal for deep system architecture (`code-architect`), complex project planning (`planner`), confidence-filtered reviews (`code-reviewer`), and security auditing (`security-auditor`).
 
 ```markdown
 - Lead Agent: Formulates task and breaks into milestones.
-- Subagent (Architect): Designs system schema and API boundaries.
-- Subagent (TDD): Writes test suites.
-- Subagent (Reviewer): Audits code diffs for regressions and bugs.
+- Subagent (Architect - Gemini 4 Argon / `pro`): Designs system schema and API boundaries.
+- Subagent (TDD - Gemini 3.8 Flash / `flash`): Writes test suites and edge cases.
+- Subagent (Reviewer - Gemini 4 Argon / `pro`): Audits code diffs for regressions and bugs.
 ```
 
 ---
