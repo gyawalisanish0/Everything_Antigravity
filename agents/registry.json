@@ -1,0 +1,925 @@
+[
+  {
+    "id": "a11y-architect",
+    "file": "agents/a11y-architect.md",
+    "role": "A11y Architect",
+    "description": "Accessibility Architect specializing in WCAG 2.2 compliance for Web and Native platforms. Use PROACTIVELY when designing UI components, establishing design systems, or auditing code for inclusive user experiences.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "a11y-architect",
+      "Role": "A11y Architect",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "agent-evaluator",
+    "file": "agents/agent-evaluator.md",
+    "role": "Agent Evaluator",
+    "description": "Evaluates agent output against 5-axis quality rubric (accuracy, completeness, clarity, actionability, conciseness). Use after any non-trivial task when the user wants a quality assessment, or when the agent-self-evaluation skill is active. Produces structured scorecard with evidence and improvement suggestions.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "agent-evaluator",
+      "Role": "Agent Evaluator",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "architect",
+    "file": "agents/architect.md",
+    "role": "Architect",
+    "description": "Software architecture specialist for system design, scalability, and technical decision-making. Use PROACTIVELY when planning new features, refactoring large systems, or making architectural decisions.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "architect",
+      "Role": "Architect",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "bengali-reviewer",
+    "file": "agents/bengali-reviewer.md",
+    "role": "Bengali Reviewer",
+    "description": "Reviews code handling Bengali (Bangla) text for Unicode correctness, proper normalization, script-aware processing, and internationalization best practices. Use when code processes, displays, or stores Bengali text.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "bengali-reviewer",
+      "Role": "Bengali Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "build-error-resolver",
+    "file": "agents/build-error-resolver.md",
+    "role": "Build Error Resolver",
+    "description": "Build and TypeScript error resolution specialist. Use PROACTIVELY when build fails or type errors occur. Fixes build/type errors only with minimal diffs, no architectural edits. Focuses on getting the build green quickly.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "build-error-resolver",
+      "Role": "Build Error Resolver",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "chief-of-staff",
+    "file": "agents/chief-of-staff.md",
+    "role": "Chief Of Staff",
+    "description": "Personal communication chief of staff that triages email, Slack, LINE, and Messenger. Classifies messages into 4 tiers (skip/info_only/meeting_info/action_required), generates draft replies, and enforces post-send follow-through via hooks. Use when managing multi-channel communication workflows.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "chief-of-staff",
+      "Role": "Chief Of Staff",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "code-architect",
+    "file": "agents/code-architect.md",
+    "role": "Code Architect",
+    "description": "Designs feature architectures by analyzing existing codebase patterns and conventions, then providing implementation blueprints with concrete files, interfaces, data flow, and build order.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "code-architect",
+      "Role": "Code Architect",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "code-explorer",
+    "file": "agents/code-explorer.md",
+    "role": "Code Explorer",
+    "description": "Deeply analyzes existing codebase features by tracing execution paths, mapping architecture layers, and documenting dependencies to inform new development.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "code-explorer",
+      "Role": "Code Explorer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "code-reviewer",
+    "file": "agents/code-reviewer.md",
+    "role": "Code Reviewer",
+    "description": "Expert code review specialist. Proactively reviews code for quality, security, and maintainability. Use immediately after writing or modifying code. MUST BE USED for all code changes.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "code-reviewer",
+      "Role": "Code Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "code-simplifier",
+    "file": "agents/code-simplifier.md",
+    "role": "Code Simplifier",
+    "description": "Simplifies and refines code for clarity, consistency, and maintainability while preserving behavior. Focus on recently modified code unless instructed otherwise.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "code-simplifier",
+      "Role": "Code Simplifier",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "comment-analyzer",
+    "file": "agents/comment-analyzer.md",
+    "role": "Comment Analyzer",
+    "description": "Analyze code comments for accuracy, completeness, maintainability, and comment rot risk.",
+    "modelTier": "flash",
+    "antigravitySubagentSpec": {
+      "TypeName": "comment-analyzer",
+      "Role": "Comment Analyzer",
+      "Model": "flash",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "commit-reviewer",
+    "file": "agents/commit-reviewer.md",
+    "role": "Commit Reviewer",
+    "description": "Reviews a staged diff and drafts a Conventional Commits-compliant message matching the repository's actual history norms. Use before committing, or when asked to write or check a commit message.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "commit-reviewer",
+      "Role": "Commit Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "conversation-analyzer",
+    "file": "agents/conversation-analyzer.md",
+    "role": "Conversation Analyzer",
+    "description": "Use this agent when analyzing conversation transcripts to find behaviors worth preventing with hooks. Triggered by /hookify without arguments.",
+    "modelTier": "flash",
+    "antigravitySubagentSpec": {
+      "TypeName": "conversation-analyzer",
+      "Role": "Conversation Analyzer",
+      "Model": "flash",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "cpp-build-resolver",
+    "file": "agents/cpp-build-resolver.md",
+    "role": "Cpp Build Resolver",
+    "description": "C++ build, CMake, and compilation error resolution specialist. Fixes build errors, linker issues, and template errors with minimal changes. Use when C++ builds fail.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "cpp-build-resolver",
+      "Role": "Cpp Build Resolver",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "cpp-reviewer",
+    "file": "agents/cpp-reviewer.md",
+    "role": "Cpp Reviewer",
+    "description": "Expert C++ code reviewer specializing in memory safety, modern C++ idioms, concurrency, and performance. Use for all C++ code changes. MUST BE USED for C++ projects.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "cpp-reviewer",
+      "Role": "Cpp Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "csharp-reviewer",
+    "file": "agents/csharp-reviewer.md",
+    "role": "Csharp Reviewer",
+    "description": "Expert C# code reviewer specializing in .NET conventions, async patterns, security, nullable reference types, and performance. Use for all C# code changes. MUST BE USED for C# projects.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "csharp-reviewer",
+      "Role": "Csharp Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "dart-build-resolver",
+    "file": "agents/dart-build-resolver.md",
+    "role": "Dart Build Resolver",
+    "description": "Dart/Flutter build, analysis, and dependency error resolution specialist. Fixes `dart analyze` errors, Flutter compilation failures, pub dependency conflicts, and build_runner issues with minimal, surgical changes. Use when Dart/Flutter builds fail.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "dart-build-resolver",
+      "Role": "Dart Build Resolver",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "database-reviewer",
+    "file": "agents/database-reviewer.md",
+    "role": "Database Reviewer",
+    "description": "PostgreSQL database specialist for query optimization, schema design, security, and performance. Use PROACTIVELY when writing SQL, creating migrations, designing schemas, or troubleshooting database performance. Incorporates Supabase best practices.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "database-reviewer",
+      "Role": "Database Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "django-build-resolver",
+    "file": "agents/django-build-resolver.md",
+    "role": "Django Build Resolver",
+    "description": "Django/Python build, migration, and dependency error resolution specialist. Fixes pip/Poetry errors, migration conflicts, import errors, Django configuration issues, and collectstatic failures with minimal changes. Use when Django setup or startup fails.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "django-build-resolver",
+      "Role": "Django Build Resolver",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "django-reviewer",
+    "file": "agents/django-reviewer.md",
+    "role": "Django Reviewer",
+    "description": "Expert Django code reviewer specializing in ORM correctness, DRF patterns, migration safety, security misconfigurations, and production-grade Django practices. Use for all Django code changes. MUST BE USED for Django projects.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "django-reviewer",
+      "Role": "Django Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "doc-updater",
+    "file": "agents/doc-updater.md",
+    "role": "Doc Updater",
+    "description": "Documentation and codemap specialist. Use PROACTIVELY for updating codemaps and documentation. Generates docs/CODEMAPS/*, updates READMEs and guides. Backs the /update-codemaps and /update-docs commands.",
+    "modelTier": "flash",
+    "antigravitySubagentSpec": {
+      "TypeName": "doc-updater",
+      "Role": "Doc Updater",
+      "Model": "flash",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "docs-lookup",
+    "file": "agents/docs-lookup.md",
+    "role": "Docs Lookup",
+    "description": "When the user asks how to use a library, framework, or API or needs up-to-date code examples, use Context7 MCP to fetch current documentation and return answers with examples. Invoke for docs/API/setup questions.",
+    "modelTier": "flash",
+    "antigravitySubagentSpec": {
+      "TypeName": "docs-lookup",
+      "Role": "Docs Lookup",
+      "Model": "flash",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "e2e-runner",
+    "file": "agents/e2e-runner.md",
+    "role": "E2e Runner",
+    "description": "End-to-end testing specialist using Vercel Agent Browser (preferred) with Playwright fallback. Use PROACTIVELY for generating, maintaining, and running E2E tests. Manages test journeys, quarantines flaky tests, uploads artifacts (screenshots, videos, traces), and ensures critical user flows work.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "e2e-runner",
+      "Role": "E2e Runner",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "fastapi-reviewer",
+    "file": "agents/fastapi-reviewer.md",
+    "role": "Fastapi Reviewer",
+    "description": "Reviews FastAPI applications for async correctness, dependency injection, Pydantic schemas, security, OpenAPI quality, testing, and production readiness.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "fastapi-reviewer",
+      "Role": "Fastapi Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "flutter-reviewer",
+    "file": "agents/flutter-reviewer.md",
+    "role": "Flutter Reviewer",
+    "description": "Flutter and Dart code reviewer. Reviews Flutter code for widget best practices, state management patterns, Dart idioms, performance pitfalls, accessibility, and clean architecture violations. Library-agnostic — works with any state management solution and tooling.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "flutter-reviewer",
+      "Role": "Flutter Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "fsharp-reviewer",
+    "file": "agents/fsharp-reviewer.md",
+    "role": "Fsharp Reviewer",
+    "description": "Expert F# code reviewer specializing in functional idioms, type safety, pattern matching, computation expressions, and performance. Use for all F# code changes. MUST BE USED for F# projects.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "fsharp-reviewer",
+      "Role": "Fsharp Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "gan-evaluator",
+    "file": "agents/gan-evaluator.md",
+    "role": "Gan Evaluator",
+    "description": "GAN Harness — Evaluator agent. Tests the live running application via Playwright, scores against rubric, and provides actionable feedback to the Generator.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "gan-evaluator",
+      "Role": "Gan Evaluator",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "gan-generator",
+    "file": "agents/gan-generator.md",
+    "role": "Gan Generator",
+    "description": "GAN Harness — Generator agent. Implements features according to the spec, reads evaluator feedback, and iterates until quality threshold is met.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "gan-generator",
+      "Role": "Gan Generator",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "gan-planner",
+    "file": "agents/gan-planner.md",
+    "role": "Gan Planner",
+    "description": "GAN Harness — Planner agent. Expands a one-line prompt into a full product specification with features, sprints, evaluation criteria, and design direction.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "gan-planner",
+      "Role": "Gan Planner",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "go-build-resolver",
+    "file": "agents/go-build-resolver.md",
+    "role": "Go Build Resolver",
+    "description": "Go build, vet, and compilation error resolution specialist. Fixes build errors, go vet issues, and linter warnings with minimal changes. Use when Go builds fail.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "go-build-resolver",
+      "Role": "Go Build Resolver",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "go-reviewer",
+    "file": "agents/go-reviewer.md",
+    "role": "Go Reviewer",
+    "description": "Expert Go code reviewer specializing in idiomatic Go, concurrency patterns, error handling, and performance. Use for all Go code changes. MUST BE USED for Go projects.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "go-reviewer",
+      "Role": "Go Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "harmonyos-app-resolver",
+    "file": "agents/harmonyos-app-resolver.md",
+    "role": "Harmonyos App Resolver",
+    "description": "HarmonyOS application development expert specializing in ArkTS and ArkUI. Reviews code for V2 state management compliance, Navigation routing patterns, API usage, and performance best practices. Use for HarmonyOS/OpenHarmony projects.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "harmonyos-app-resolver",
+      "Role": "Harmonyos App Resolver",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "harness-optimizer",
+    "file": "agents/harness-optimizer.md",
+    "role": "Harness Optimizer",
+    "description": "Improve local agent-harness configuration reliability and cost using eval-driven grading (pass@k/pass^k) derived from the eval-harness skill.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "harness-optimizer",
+      "Role": "Harness Optimizer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "healthcare-reviewer",
+    "file": "agents/healthcare-reviewer.md",
+    "role": "Healthcare Reviewer",
+    "description": "Reviews healthcare application code for clinical safety, CDSS accuracy, PHI compliance, and medical data integrity. Specialized for EMR/EHR, clinical decision support, and health information systems.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "healthcare-reviewer",
+      "Role": "Healthcare Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "homelab-architect",
+    "file": "agents/homelab-architect.md",
+    "role": "Homelab Architect",
+    "description": "Designs home and small-lab network plans from hardware inventory, goals, and operator experience level, with safe staged changes and rollback guidance.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "homelab-architect",
+      "Role": "Homelab Architect",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "java-build-resolver",
+    "file": "agents/java-build-resolver.md",
+    "role": "Java Build Resolver",
+    "description": "Java/Maven/Gradle build, compilation, and dependency error resolution specialist. Automatically detects Spring Boot or Quarkus and applies framework-specific fixes. Fixes build errors, Java compiler errors, and Maven/Gradle issues with minimal changes. Use when Java builds fail.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "java-build-resolver",
+      "Role": "Java Build Resolver",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "java-reviewer",
+    "file": "agents/java-reviewer.md",
+    "role": "Java Reviewer",
+    "description": "Expert Java code reviewer for Spring Boot and Quarkus projects. Automatically detects the framework and applies the appropriate review rules. Covers layered architecture, JPA/Panache, MongoDB, security, and concurrency. MUST BE USED for all Java code changes.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "java-reviewer",
+      "Role": "Java Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "kotlin-build-resolver",
+    "file": "agents/kotlin-build-resolver.md",
+    "role": "Kotlin Build Resolver",
+    "description": "Kotlin/Gradle build, compilation, and dependency error resolution specialist. Fixes build errors, Kotlin compiler errors, and Gradle issues with minimal changes. Use when Kotlin builds fail.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "kotlin-build-resolver",
+      "Role": "Kotlin Build Resolver",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "kotlin-reviewer",
+    "file": "agents/kotlin-reviewer.md",
+    "role": "Kotlin Reviewer",
+    "description": "Kotlin and Android/KMP code reviewer. Reviews Kotlin code for idiomatic patterns, coroutine safety, Compose best practices, clean architecture violations, and common Android pitfalls.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "kotlin-reviewer",
+      "Role": "Kotlin Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "loop-operator",
+    "file": "agents/loop-operator.md",
+    "role": "Loop Operator",
+    "description": "Operate autonomous agent loops, monitor progress, and intervene safely when loops stall.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "loop-operator",
+      "Role": "Loop Operator",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "marketing-agent",
+    "file": "agents/marketing-agent.md",
+    "role": "Marketing Agent",
+    "description": "Marketing strategist and copywriter for campaign planning, audience research, positioning, copy creation, and content review. Covers landing pages, email sequences, social posts, ad copy, short-form video scripts, and content calendars. Use when the user wants to plan or execute a product launch or marketing campaign.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "marketing-agent",
+      "Role": "Marketing Agent",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "mle-reviewer",
+    "file": "agents/mle-reviewer.md",
+    "role": "Mle Reviewer",
+    "description": "Production machine-learning engineering reviewer for data contracts, feature pipelines, training reproducibility, offline/online evaluation, model serving, monitoring, and rollback. Use when ML, MLOps, model training, inference, feature store, or evaluation code changes.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "mle-reviewer",
+      "Role": "Mle Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "network-architect",
+    "file": "agents/network-architect.md",
+    "role": "Network Architect",
+    "description": "Designs enterprise or multi-site network architecture from requirements, using existing network skills for focused routing, validation, automation, and troubleshooting detail.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "network-architect",
+      "Role": "Network Architect",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "network-config-reviewer",
+    "file": "agents/network-config-reviewer.md",
+    "role": "Network Config Reviewer",
+    "description": "Reviews router and switch configurations for security, correctness, stale references, risky change-window commands, and missing operational guardrails.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "network-config-reviewer",
+      "Role": "Network Config Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "network-troubleshooter",
+    "file": "agents/network-troubleshooter.md",
+    "role": "Network Troubleshooter",
+    "description": "Diagnoses network connectivity, routing, DNS, interface, and policy symptoms with a read-only OSI-layer workflow and evidence-backed root cause summary.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "network-troubleshooter",
+      "Role": "Network Troubleshooter",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "opensource-forker",
+    "file": "agents/opensource-forker.md",
+    "role": "Opensource Forker",
+    "description": "Fork any project for open-sourcing. Copies files, strips secrets and credentials (20+ patterns), replaces internal references with placeholders, generates .env.example, and cleans git history. First stage of the opensource-pipeline skill.",
+    "modelTier": "flash",
+    "antigravitySubagentSpec": {
+      "TypeName": "opensource-forker",
+      "Role": "Opensource Forker",
+      "Model": "flash",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "opensource-packager",
+    "file": "agents/opensource-packager.md",
+    "role": "Opensource Packager",
+    "description": "Generate complete open-source packaging for a sanitized project. Produces CLAUDE.md, setup.sh, README.md, LICENSE, CONTRIBUTING.md, and GitHub issue templates. Makes any repo immediately usable with Claude Code. Third stage of the opensource-pipeline skill.",
+    "modelTier": "flash",
+    "antigravitySubagentSpec": {
+      "TypeName": "opensource-packager",
+      "Role": "Opensource Packager",
+      "Model": "flash",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "opensource-sanitizer",
+    "file": "agents/opensource-sanitizer.md",
+    "role": "Opensource Sanitizer",
+    "description": "Verify an open-source fork is fully sanitized before release. Scans for leaked secrets, PII, internal references, and dangerous files using 20+ regex patterns. Generates a PASS/FAIL/PASS-WITH-WARNINGS report. Second stage of the opensource-pipeline skill. Use PROACTIVELY before any public release.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "opensource-sanitizer",
+      "Role": "Opensource Sanitizer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "performance-optimizer",
+    "file": "agents/performance-optimizer.md",
+    "role": "Performance Optimizer",
+    "description": "Performance analysis and optimization specialist. Use PROACTIVELY for identifying bottlenecks, optimizing slow code, reducing bundle sizes, and improving runtime performance. Profiling, memory leaks, render optimization, and algorithmic improvements.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "performance-optimizer",
+      "Role": "Performance Optimizer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "php-reviewer",
+    "file": "agents/php-reviewer.md",
+    "role": "Php Reviewer",
+    "description": "Expert PHP code reviewer specializing in PSR-12 compliance, PHP type system, Eloquent ORM patterns, security, and performance. Use for all PHP code changes. MUST BE USED for PHP projects.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "php-reviewer",
+      "Role": "Php Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "planner",
+    "file": "agents/planner.md",
+    "role": "Planner",
+    "description": "Expert planning specialist for complex features and refactoring. Use PROACTIVELY when users request feature implementation, architectural changes, or complex refactoring. Automatically activated for planning tasks.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "planner",
+      "Role": "Planner",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "pr-test-analyzer",
+    "file": "agents/pr-test-analyzer.md",
+    "role": "Pr Test Analyzer",
+    "description": "Review pull request test coverage quality and completeness, with emphasis on behavioral coverage and real bug prevention.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "pr-test-analyzer",
+      "Role": "Pr Test Analyzer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "python-reviewer",
+    "file": "agents/python-reviewer.md",
+    "role": "Python Reviewer",
+    "description": "Expert Python code reviewer specializing in PEP 8 compliance, Pythonic idioms, type hints, security, and performance. Use for all Python code changes. MUST BE USED for Python projects.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "python-reviewer",
+      "Role": "Python Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "pytorch-build-resolver",
+    "file": "agents/pytorch-build-resolver.md",
+    "role": "Pytorch Build Resolver",
+    "description": "PyTorch runtime, CUDA, and training error resolution specialist. Fixes tensor shape mismatches, device errors, gradient issues, DataLoader problems, and mixed precision failures with minimal changes. Use when PyTorch training or inference crashes.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "pytorch-build-resolver",
+      "Role": "Pytorch Build Resolver",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "rag-pipeline-reviewer",
+    "file": "agents/rag-pipeline-reviewer.md",
+    "role": "Rag Pipeline Reviewer",
+    "description": "Reviews RAG (Retrieval-Augmented Generation) pipelines for retrieval quality, chunking strategy, embedding choices, and evaluation coverage. Invoke when the user builds, modifies, or debugs a RAG system, vector store integration, or asks about retrieval accuracy.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "rag-pipeline-reviewer",
+      "Role": "Rag Pipeline Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "react-build-resolver",
+    "file": "agents/react-build-resolver.md",
+    "role": "React Build Resolver",
+    "description": "Diagnose and fix React build failures across Vite, webpack, Next.js, CRA, Parcel, esbuild, and Bun. Handles JSX/TSX compile errors, hydration mismatches, server/client component boundary failures, missing types, and bundler-specific configuration issues with minimal, surgical changes. MUST BE USED when a React build fails.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "react-build-resolver",
+      "Role": "React Build Resolver",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "react-reviewer",
+    "file": "agents/react-reviewer.md",
+    "role": "React Reviewer",
+    "description": "Expert React/JSX code reviewer specializing in hook correctness, render performance, server/client component boundaries, accessibility, and React-specific security. Use for any change touching .tsx/.jsx files or React component logic. MUST BE USED for React projects.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "react-reviewer",
+      "Role": "React Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "refactor-cleaner",
+    "file": "agents/refactor-cleaner.md",
+    "role": "Refactor Cleaner",
+    "description": "Dead code cleanup and consolidation specialist. Use PROACTIVELY for removing unused code, duplicates, and refactoring. Runs analysis tools (knip, depcheck, ts-prune) to identify dead code and safely removes it.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "refactor-cleaner",
+      "Role": "Refactor Cleaner",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "ruby-reviewer",
+    "file": "agents/ruby-reviewer.md",
+    "role": "Ruby Reviewer",
+    "description": "Expert Ruby and Rails code reviewer specializing in idiomatic Ruby, Active Record query safety, Rails security defaults, and RSpec/Minitest quality. Use for all Ruby code changes. MUST BE USED for Ruby and Rails projects.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "ruby-reviewer",
+      "Role": "Ruby Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "rust-build-resolver",
+    "file": "agents/rust-build-resolver.md",
+    "role": "Rust Build Resolver",
+    "description": "Rust build, compilation, and dependency error resolution specialist. Fixes cargo build errors, borrow checker issues, and Cargo.toml problems with minimal changes. Use when Rust builds fail.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "rust-build-resolver",
+      "Role": "Rust Build Resolver",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "rust-reviewer",
+    "file": "agents/rust-reviewer.md",
+    "role": "Rust Reviewer",
+    "description": "Expert Rust code reviewer specializing in ownership, lifetimes, error handling, unsafe usage, and idiomatic patterns. Use for all Rust code changes. MUST BE USED for Rust projects.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "rust-reviewer",
+      "Role": "Rust Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "security-reviewer",
+    "file": "agents/security-reviewer.md",
+    "role": "Security Reviewer",
+    "description": "Security vulnerability detection and remediation specialist. Use PROACTIVELY after writing code that handles user input, authentication, API endpoints, or sensitive data. Flags secrets, SSRF, injection, unsafe crypto, and OWASP Top 10 vulnerabilities.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "security-reviewer",
+      "Role": "Security Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "seo-specialist",
+    "file": "agents/seo-specialist.md",
+    "role": "Seo Specialist",
+    "description": "SEO specialist for technical SEO audits, on-page optimization, structured data, Core Web Vitals, and content/keyword mapping. Use for site audits, meta tag reviews, schema markup, sitemap and robots issues, and SEO remediation plans.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "seo-specialist",
+      "Role": "Seo Specialist",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "silent-failure-hunter",
+    "file": "agents/silent-failure-hunter.md",
+    "role": "Silent Failure Hunter",
+    "description": "Review code for silent failures, swallowed errors, bad fallbacks, and missing error propagation.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "silent-failure-hunter",
+      "Role": "Silent Failure Hunter",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "spec-miner",
+    "file": "agents/spec-miner.md",
+    "role": "Spec Miner",
+    "description": "Extracts behavioral specs from existing codebases for OpenSpec. Produces flat Requirement and Invariant blocks with structured metadata (entities, enforced, id, test anchors). Outputs openspec/specs/<capability>/spec.md. Fully self-bootstrapping — no dependency on codebase-onboarding. Use when onboarding a brownfield project to spec-driven development.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "spec-miner",
+      "Role": "Spec Miner",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "swift-build-resolver",
+    "file": "agents/swift-build-resolver.md",
+    "role": "Swift Build Resolver",
+    "description": "Swift/Xcode build, compilation, and dependency error resolution specialist. Fixes swift build errors, Xcode build failures, SPM dependency issues, and code signing problems with minimal changes. Use when Swift builds fail.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "swift-build-resolver",
+      "Role": "Swift Build Resolver",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "swift-reviewer",
+    "file": "agents/swift-reviewer.md",
+    "role": "Swift Reviewer",
+    "description": "Expert Swift code reviewer specializing in protocol-oriented design, value semantics, ARC memory management, Swift Concurrency, and idiomatic patterns. Use for all Swift code changes. MUST BE USED for Swift projects.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "swift-reviewer",
+      "Role": "Swift Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "tdd-guide",
+    "file": "agents/tdd-guide.md",
+    "role": "Tdd Guide",
+    "description": "Test-Driven Development specialist enforcing write-tests-first methodology. Use PROACTIVELY when writing new features, fixing bugs, or refactoring code. Ensures 80%+ test coverage.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "tdd-guide",
+      "Role": "Tdd Guide",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "type-design-analyzer",
+    "file": "agents/type-design-analyzer.md",
+    "role": "Type Design Analyzer",
+    "description": "Analyze type design for encapsulation, invariant expression, usefulness, and enforcement.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "type-design-analyzer",
+      "Role": "Type Design Analyzer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "typescript-reviewer",
+    "file": "agents/typescript-reviewer.md",
+    "role": "Typescript Reviewer",
+    "description": "Expert TypeScript/JavaScript code reviewer specializing in type safety, async correctness, Node/web security, and idiomatic patterns. Use for all TypeScript and JavaScript code changes. MUST BE USED for TypeScript/JavaScript projects.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "typescript-reviewer",
+      "Role": "Typescript Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  },
+  {
+    "id": "vue-reviewer",
+    "file": "agents/vue-reviewer.md",
+    "role": "Vue Reviewer",
+    "description": "Expert Vue.js code reviewer specializing in Composition API correctness, reactivity pitfalls, component architecture, template security, and Vue-specific performance. Use for any change touching .vue, .ts/.js files with Vue imports, or Vue ecosystem code (Pinia, Vue Router, Nuxt). MUST BE USED for Vue projects.",
+    "modelTier": "pro",
+    "antigravitySubagentSpec": {
+      "TypeName": "vue-reviewer",
+      "Role": "Vue Reviewer",
+      "Model": "pro",
+      "Workspace": "inherit"
+    }
+  }
+]

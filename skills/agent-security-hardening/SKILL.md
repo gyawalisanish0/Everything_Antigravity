@@ -130,7 +130,7 @@ This step is complete when file-mode checks, forced-error cleanup tests, and log
 
 ### 5. Bound and Sanitize Tool Output
 
-Read tool output with a byte limit rather than collecting an unbounded stream. Preserve structured fields, remove disallowed control characters, and append an explicit truncation marker with the original byte count. Keep a content hash when later forensic comparison matters.
+view_file tool output with a byte limit rather than collecting an unbounded stream. Preserve structured fields, remove disallowed control characters, and append an explicit truncation marker with the original byte count. Keep a content hash when later forensic comparison matters.
 
 Do not silently turn malformed output into an empty success value. Return a typed failure that names the producing tool, boundary, and validation reason without echoing sensitive content.
 
